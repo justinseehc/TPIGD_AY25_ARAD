@@ -21,7 +21,6 @@ public class PrefabCreator : MonoBehaviour
     {
         foreach (ARTrackedImage image in obj.added)
         {
-            Debug.Log(image.referenceImage.texture);
             if (image.referenceImage.texture != null)
             {
                 dragon = Instantiate(dragonPrefab, image.transform);
