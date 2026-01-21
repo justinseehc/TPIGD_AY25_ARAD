@@ -21,8 +21,12 @@ public class PrefabCreator : MonoBehaviour
     {
         foreach (ARTrackedImage image in obj.added)
         {
-            dragon = Instantiate(dragonPrefab, image.transform);
-            dragon.transform.position += prefabOffset;
+            Debug.Log(image.referenceImage.texture);
+            if (image.referenceImage.texture != null)
+            {
+                dragon = Instantiate(dragonPrefab, image.transform);
+                dragon.transform.position += prefabOffset;
+            }
         }
     }
 }
